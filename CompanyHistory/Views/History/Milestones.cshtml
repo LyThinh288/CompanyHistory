@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Các cột mốc phát triển";
+
+    var milestones = ViewData["Milestones"] as List<string>;
+}
+
+<h2>Các cột mốc phát triển</h2>
+
+<ul>
+    @if (milestones != null)
+    {
+        foreach (var item in milestones)
+        {
+            <li>@item</li>
+        }
+    }
+</ul>
+@Html.Partial("_HistoryFooter")
+
